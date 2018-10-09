@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login
-
+from .models import user_account
 
 # Create your views here.
 
@@ -14,6 +14,9 @@ def register(request):
             form.save()
             username = form.cleaned_data['username']
             password = form.cleaned_data['password1']
+
+            new_user = user_account(name=username)
+            new_user.save()
 
             user = authenticate(username=username, password=password)
             login(request, user)

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'geoposition',
     'restaurant_accounts',
     'customer_accounts',
+    'accounts',
 ]
 
 MIDDLEWARE = [
