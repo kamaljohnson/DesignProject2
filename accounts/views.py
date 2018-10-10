@@ -1,9 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login
-from .models import user_account
-
-# Create your views here.
+from restaurant_accounts.models import user_account
 
 
 def register(request):
