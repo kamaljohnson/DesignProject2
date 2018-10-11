@@ -1,10 +1,9 @@
 from django import forms
-from geoposition.forms import GeopositionWidget, GeopositionField
 
 
 class RestaurantForm(forms.Form):
     name = forms.CharField(label='name')
-    position = GeopositionField(widget=GeopositionWidget)
+    city = forms.CharField()
 
 
 class MenuForm(forms.Form):
